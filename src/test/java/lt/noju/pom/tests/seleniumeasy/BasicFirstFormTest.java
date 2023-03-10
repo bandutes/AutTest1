@@ -1,4 +1,4 @@
-package lt.nojus.demo;
+package lt.noju.pom.tests.seleniumeasy;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -7,14 +7,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class BasicFirstForm {
+public class BasicFirstFormTest {
 
-    @Test
-    public void SingleInputField() {
+    @BeforeMethod
+    public void setUp() {
+
         WebDriverManager.chromedriver().setup();
 
         ChromeOptions options = new ChromeOptions();
@@ -26,6 +29,21 @@ public class BasicFirstForm {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         driver.get("http://demo.seleniumeasy.com/basic-first-form-demo.html");
+
+    }
+        @Test
+    public void SingleInputField() {
+        WebDriverManager.chromedriver().setup();
+
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--remote-allow-origins=*");
+//        options.addArguments("start-minimized");
+//        options.addArguments("--force-device-scale-factor=0.70");
+//
+//        WebDriver driver = new ChromeDriver(options);
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//
+//        driver.get("http://demo.seleniumeasy.com/basic-first-form-demo.html");
 
         String Message = "labas vakaras";
         String expectedResult = "labas vakaras";
@@ -48,17 +66,17 @@ public class BasicFirstForm {
 
     @Test
     public void TwoInputFields() {
-        WebDriverManager.chromedriver().setup();
-
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
-        options.addArguments("start-minimized");
-        options.addArguments("--force-device-scale-factor=0.70");
-
-        WebDriver driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-        driver.get("http://demo.seleniumeasy.com/basic-first-form-demo.html");
+//        WebDriverManager.chromedriver().setup();
+//
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--remote-allow-origins=*");
+//        options.addArguments("start-minimized");
+//        options.addArguments("--force-device-scale-factor=0.70");
+//
+//        WebDriver driver = new ChromeDriver(options);
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//
+//        driver.get("http://demo.seleniumeasy.com/basic-first-form-demo.html");
 
         String number_a = "1";
         String number_b = "22";
@@ -86,5 +104,29 @@ public class BasicFirstForm {
 
     }
 
+    WebDriver driver;
 
+
+    @BeforeMethod
+    public void setUp() {
+
+        WebDriverManager.chromedriver().setup();
+
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+        options.addArguments("start-minimized");
+        options.addArguments("--force-device-scale-factor=0.70");
+
+        WebDriver driver = new ChromeDriver(options);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+        driver.get("http://demo.seleniumeasy.com/basic-first-form-demo.html");
+
+    }
+
+    @AfterMethod
+    public void tearDown() {
+        driver.quit();
+
+    }
 }
