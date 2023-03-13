@@ -2,14 +2,15 @@ package lt.noju.pom.tests.seleniumeasy;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import lt.noju.pom.pages.seleniumeasy.BasicFirstFormpage;
+import lt.noju.pom.tests.BaseTest;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class BasicFirstFormTest {
+public class BasicFirstFormTest extends BaseTest {
 
     @BeforeMethod
+    @Override
     public void setUp() {
         BasicFirstFormpage.open();
     }
@@ -49,10 +50,5 @@ public class BasicFirstFormTest {
                 actualResult.contains(expectedResult),
                 String.format("Actual: %s, Expected: %s", actualResult, expectedResult)
         );
-    }
-
-    @AfterMethod
-    public void tearDown() {
-       BasicFirstFormpage.close();
     }
 }

@@ -1,16 +1,13 @@
 package lt.noju.pom.tests.seleniumeasy;
 
 import lt.noju.pom.pages.seleniumeasy.BasicDropdownPage;
+import lt.noju.pom.tests.BaseTest;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class BasicDropdownTest {
-    @BeforeMethod
-    public void setUp() {
-        BasicDropdownPage.open();
-    }
+public class BasicDropdownTest extends BaseTest {
+
     @Test
     public void testSelectedDay() {
         String attributeValue = "Monday";
@@ -26,8 +23,8 @@ public class BasicDropdownTest {
         );
     }
 
-    @AfterMethod
-    public void tearDown() {
-        BasicDropdownPage.close();
+    @BeforeMethod
+    @Override
+    public void setUp() {
     }
 }
