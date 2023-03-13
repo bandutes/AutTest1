@@ -1,4 +1,5 @@
-package lt.noju.pom.tests.seleniumeasy;
+package lt.noju.pom.pages.seleniumeasy;
+import lt.noju.pom.tests.seleniumeasy.Common;
 import org.openqa.selenium.By;
 
 public class BasicFirstFormpage {

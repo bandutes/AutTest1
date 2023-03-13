@@ -1,6 +1,7 @@
 package lt.noju.pom.tests.seleniumeasy;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import lt.noju.pom.pages.seleniumeasy.BasicFirstFormpage;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;

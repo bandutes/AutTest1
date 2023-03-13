@@ -1,7 +1,9 @@
 package lt.noju.pom.tests.seleniumeasy;
+
 import lt.noju.pom.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 public class Common {
     public static void openUrl(String url) {
@@ -32,5 +34,11 @@ public class Common {
 
     public static String getTextFormatElement(By locator) {
         return getElement(locator).getText();
+    }
+
+    public static void selectOptionByalue(String attributeValue, By locator) {
+        WebElement element = getElement(locator);
+        Select select = new Select(element);
+        select.deselectByValue(attributeValue);
     }
 }
