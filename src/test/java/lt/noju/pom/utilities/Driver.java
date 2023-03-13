@@ -10,9 +10,7 @@ import java.time.Duration;
 public class Driver {
 
     private static WebDriver driver;
-
-    public void setDriver() {
-
+    public static void setDriver() {
 
         WebDriverManager.chromedriver().setup();
 
@@ -25,20 +23,13 @@ public class Driver {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         driver.get("http://demo.seleniumeasy.com/basic-first-form-demo.html");
-
     }
 
     public static WebDriver getDriver() {
         return driver;
     }
 
-    public static void setDriver(WebDriver driver) {
-        Driver.driver = driver;
-    }
-
     public static void closeDriver() {
         driver.quit();
-
     }
-
 }
