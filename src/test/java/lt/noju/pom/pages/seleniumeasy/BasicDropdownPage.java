@@ -1,7 +1,7 @@
 package lt.noju.pom.pages.seleniumeasy;
 
+import lt.noju.pom.pages.Locators;
 import lt.noju.pom.tests.seleniumeasy.Common;
-import org.openqa.selenium.By;
 
 public class BasicDropdownPage {
     public static void open() {
@@ -15,12 +15,11 @@ public class BasicDropdownPage {
 
     public static void selectDayFromDropdown(String attributeValue) {
         Common.selectOptionByalue(
-                attributeValue,
-                By.xpath("//select[@id='select-demo']")
+                attributeValue, Locators.SeleniumEasy.BasicDropdownPage.selectDayFromDropdown
         );
     }
 
     public static String readMessageDayOfWeek() {
-        return Common.getTextFormatElement(By.xpath("//p[contains(text(), 'Day selected']"));
+        return Common.getTextFormatElement(Locators.SeleniumEasy.BasicDropdownPage.readMessageDayOfWeek);
     }
 }

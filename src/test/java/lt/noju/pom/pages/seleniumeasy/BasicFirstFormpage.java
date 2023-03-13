@@ -1,6 +1,7 @@
 package lt.noju.pom.pages.seleniumeasy;
+
+import lt.noju.pom.pages.Locators;
 import lt.noju.pom.tests.seleniumeasy.Common;
-import org.openqa.selenium.By;
 
 public class BasicFirstFormpage {
 
@@ -12,7 +13,8 @@ public class BasicFirstFormpage {
     public static void enterFullName(String message) {
        Common.sendKeysToElement(
                message,
-               By.xpath("//input[@id='user-message']")
+//               By.xpath("//input[@id='user-message']")
+               Locators.SeleniumEasy.BasicFirstForm.inputUserMessage
        );
     }
 
@@ -21,33 +23,30 @@ public class BasicFirstFormpage {
     }
 
     public static void clickButtonShowMessage() {
-        Common.clickElement(By.xpath("//button[@class='btn btn-default']"));
+        Common.clickElement(Locators.SeleniumEasy.BasicFirstForm.buttonShowMessage);
     }
 
     public static String readDisplayText() {
-        return Common.getTextFormatElement(By.xpath("//span[@id='display']"));
+        return Common.getTextFormatElement(Locators.SeleniumEasy.BasicFirstForm.spanDisplayText);
     }
 
     public static void enterAnyValue1(String number_a) {
-        Common.sendKeysToElement(
-                number_a,
-                By.xpath("//input[@id='sum1']")
-        );
+        Common.sendKeysToElement(number_a,
+                Locators.SeleniumEasy.BasicFirstForm.enterAnyValue1);
     }
 
     public static void enterAnyValue2(String number_b) {
-        Common.sendKeysToElement(
-                number_b,
-                By.xpath("//input[@id='sum2']")
+        Common.sendKeysToElement(number_b,
+                Locators.SeleniumEasy.BasicFirstForm.enterAnyValue2
         );
     }
 
     public static void clickButtonShowValue() {
-        Common.clickElement(By.xpath("//button[@onclick='return total()']"));
+        Common.clickElement(Locators.SeleniumEasy.BasicFirstForm.clickButtonShowValue);
     }
 
     public static String readDisplayValue() {
-        return Common.getTextFormatElement(By.xpath("//span[@id='displayvalue']"));
+        return Common.getTextFormatElement(Locators.SeleniumEasy.BasicFirstForm.readDisplayValue);
     }
 }
 

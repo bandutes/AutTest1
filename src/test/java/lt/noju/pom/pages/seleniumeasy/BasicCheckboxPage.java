@@ -1,7 +1,7 @@
 package lt.noju.pom.pages.seleniumeasy;
 
+import lt.noju.pom.pages.Locators;
 import lt.noju.pom.tests.seleniumeasy.Common;
-import org.openqa.selenium.By;
 
 public class BasicCheckboxPage {
     public static void open() {
@@ -14,10 +14,10 @@ public class BasicCheckboxPage {
     }
 
     public static void clickCheckbox() {
-        Common.clickElement(By.xpath("//input[@id='isAgeSelected']"));
+        Common.clickElement(Locators.SeleniumEasy.BasicCheckbox.checkboxSingle);
     }
 
     public static String showDisplayText() {
-        return Common.getTextFormatElement(By.xpath("//div[@id='txtAge']"));
+        return Common.getTextFormatElement(Locators.SeleniumEasy.BasicCheckbox.divDisplay);
     }
 }
