@@ -19,10 +19,8 @@ public class Driver {
         options.addArguments("start-minimized");
         options.addArguments("--force-device-scale-factor=0.70");
 
-        WebDriver driver = new ChromeDriver(options);
+        driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-        driver.get("http://demo.seleniumeasy.com/basic-first-form-demo.html");
     }
 
     public static WebDriver getDriver() {

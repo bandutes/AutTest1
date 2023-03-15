@@ -1,7 +1,7 @@
 package lt.noju.pom.pages.seleniumeasy;
 
 import lt.noju.pom.pages.Locators;
-import lt.noju.pom.tests.seleniumeasy.Common;
+import lt.noju.pom.pages.Common;
 
 public class BasicCheckboxPage {
     public static void open() {

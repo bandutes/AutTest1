@@ -1,4 +1,4 @@
-package lt.noju.pom.tests.seleniumeasy;
+package lt.noju.pom.pages;
 
 import lt.noju.pom.utilities.Driver;
 import org.openqa.selenium.By;

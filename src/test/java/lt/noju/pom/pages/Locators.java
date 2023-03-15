@@ -25,10 +25,18 @@ public class Locators {
             public static By readMessageDayOfWeek = By.xpath("//p[contains(text(), 'Day selected']");
         }
 
-        public static class BasicRadioButton {
-
-            public static By checkValue = By.xpath("//button[@id='buttoncheck']");
-            public static By checkintTheValueDisplayed = By.xpath("//p[@class='radiobutton']");
+//        public static class BasicRadioButton {
+//
+//            public static By checkValue = By.xpath("//button[@id='buttoncheck']");
+//            public static By checkingTheValueDisplayed = By.xpath("//p[@class='radiobutton']");
+//            public static By choosingTheSexType(String attributeValue) =
+//                    By.xpath(String.format("//input[@value='%s' and @name='optradio']", attributeValue)
+//                    );
+//            public static By choosingTheAgeGroup = By.xpath("//input[@value='0 - 5']");
+//            public static By clickingOnGetSexAndAgeGroupValues =
+//                    By.xpath("//button[@class='btn btn-default' and @onclick]");
+//            public static By getTheValueOfSexAndAgeDisplayed =
+//                    By.xpath("//p[@class='groupradiobutton']");
 
             public static By chooseInputByGender(String attributeValue) {
                 return By.xpath(
