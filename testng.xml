@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Demo TestNG">
+    <test name="Demo tests">
+        <classes>
+            <class name="lt.noju.pom.tests.seleniumeasy.BasicFirstFormTest"/>
+            <class name="lt.noju.pom.tests.seleniumeasy.BasicCheckboxTest"/>
+            <class name="lt.noju.pom.tests.seleniumeasy.BasicDropdownTest"/>
+            <class name="lt.noju.pom.tests.seleniumeasy.BasicRadioButton"/>
+        </classes>
+    </test>
+</suite>
