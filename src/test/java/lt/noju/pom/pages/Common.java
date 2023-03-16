@@ -3,6 +3,7 @@ package lt.noju.pom.pages;
 import lt.noju.pom.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.ArrayList;
@@ -63,6 +64,33 @@ public class Common {
 
     public static String getElementAttributeValue(String attributeName, By locator) {
         return getElement(locator).getAttribute(attributeName);
+    }
+
+    public static void clickElementByActions(By locator) {
+        Actions actions = new Actions(Driver.getDriver());
+        WebElement element = getElement(locator);
+
+        actions.moveToElement(element);
+        actions.click();
+        actions.perform();
+    }
+
+    public static void doubleClickElementByAction(By locator) {
+        Actions actions = new Actions(Driver.getDriver());
+        WebElement element = getElement(locator);
+
+        actions.moveToElement(element);
+        actions.doubleClick();
+        actions.perform();
+    }
+
+    public static void rightClickElement(By locator) {
+        Actions actions = new Actions(Driver.getDriver());
+        WebElement element = getElement(locator);
+
+        actions.moveToElement(element);
+        actions.contextClick();
+        actions.perform();
     }
 }
 

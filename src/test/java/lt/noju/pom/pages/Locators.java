@@ -47,5 +47,28 @@ public class Locators {
             );
         }
     }
+
+    public static class DemoQa {
+
+        public static class Home {
+
+            public static By menuElements = By.xpath("//div[@class='category-cards']/div[1]");
+        }
+
+        public static class Elements {
+
+            public static By leftMenuButtons =
+                    By.xpath("//div[@class='element-list collapse show']/ul/li[5]");
+        }
+
+        public static class Buttons {
+            public static By buttonDoubleClick =
+                    By.xpath("//*[@id='doubleClickBtn']");
+            public static By paragraphDoubleClickMessage =
+                    By.xpath("//*[@id='doubleClickMessage']");
+            public static By rightClickButton = By.xpath("//*[@id='rightClickBtn']");
+            public static By buttonRightClick = By.xpath("//*[@id='rightClickMessage']");
+        }
+    }
 }
 
