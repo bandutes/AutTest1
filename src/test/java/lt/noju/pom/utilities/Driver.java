@@ -9,7 +9,9 @@ import java.time.Duration;
 
 public class Driver {
 
-    private static WebDriver driver;
+    //    private static WebDriver driver;
+    private static ThreadLocal<WebDriver> drivers = new ThreadLocal<>();
+
     public static void setDriver() {
 
         WebDriverManager.chromedriver().setup();
@@ -19,15 +21,20 @@ public class Driver {
         options.addArguments("start-minimized");
         options.addArguments("--force-device-scale-factor=0.70");
 
-        driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//        ChromeDriver driver = new ChromeDriver(options);
+        drivers.set(new ChromeDriver(options));
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        drivers.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     public static WebDriver getDriver() {
-        return driver;
+//        return driver;
+        return drivers.get();
     }
 
     public static void closeDriver() {
-        driver.quit();
+//        driver.quit();
+        drivers.get().quit();
+        drivers.remove();
     }
 }

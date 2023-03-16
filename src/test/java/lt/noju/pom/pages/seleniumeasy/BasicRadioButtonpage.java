@@ -1,7 +1,7 @@
+
 package lt.noju.pom.pages.seleniumeasy;
 
-import lt.noju.pom.pages.Locators;
-import lt.noju.pom.tests.seleniumeasy.Common;
+import lt.noju.pom.pages.Common;
 
 public class BasicRadioButtonpage {
 
@@ -11,15 +11,15 @@ public class BasicRadioButtonpage {
 
     }
 
-    public static void clickOnRadioButton(String attributeValue) {
-        Common.clickElement(Locators.SeleniumEasy.BasicRadioButton.chooseInputByGender(attributeValue));
-    }
-
-    public static void clickOnGetValueButton() {
-        Common.clickElement(Locators.SeleniumEasy.BasicRadioButton.checkValue);
-    }
-
-    public static String displayedRadioButtonValue() {
-        return Common.getTextFormatElement(Locators.SeleniumEasy.BasicRadioButton.checkintTheValueDisplayed);
-    }
+//    public static void clickOnRadioButton(String attributeValue) {
+//        Common.clickElement(Locators.SeleniumEasy.BasicRadioButton.chooseInputByGender(attributeValue));
+//    }
+//
+//    public static void clickOnGetValueButton() {
+//        Common.clickElement(Locators.SeleniumEasy.BasicRadioButton.checkValue);
+//    }
+//
+//    public static String displayedRadioButtonValue() {
+//        return Common.getTextFormatElement(Locators.SeleniumEasy.BasicRadioButton.checkintTheValueDisplayed);
+//    }
 }

@@ -1,7 +1,7 @@
 package lt.noju.pom.pages.seleniumeasy;
 
+import lt.noju.pom.pages.Common;
 import lt.noju.pom.pages.Locators;
-import lt.noju.pom.tests.seleniumeasy.Common;
 
 public class BasicDropdownPage {
     public static void open() {

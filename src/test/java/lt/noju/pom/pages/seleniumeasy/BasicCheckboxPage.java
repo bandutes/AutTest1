@@ -1,7 +1,9 @@
 package lt.noju.pom.pages.seleniumeasy;
 
-import lt.noju.pom.pages.Locators;
 import lt.noju.pom.pages.Common;
+import lt.noju.pom.pages.Locators;
+
+import java.util.List;
 
 public class BasicCheckboxPage {
     public static void open() {
@@ -19,5 +21,26 @@ public class BasicCheckboxPage {
 
     public static String showDisplayText() {
         return Common.getTextFormatElement(Locators.SeleniumEasy.BasicCheckbox.divDisplay);
+    }
+
+    public static void clickOnButtonCheckAll() {
+        Common.clickElement(Locators.SeleniumEasy.BasicCheckbox.buttonCheckAll);
+    }
+
+    public static boolean checkSelectedStatusOfAllCheckboxes(boolean expectedStatus) {
+        List<Boolean> statusList = Common.getSelectedStatusesOfCheckboxes(
+                Locators.SeleniumEasy.BasicCheckbox.inputMultipleCheckbox
+        );
+        for (boolean status : statusList) {
+            if (status != expectedStatus) return false;
+        }
+        return true;
+    }
+
+    public static String getButtonAttributeValue(String attributeName) {
+        return Common.getElementAttributeValue(
+                attributeName,
+                Locators.SeleniumEasy.BasicCheckbox.buttonCheckAll
+        );
     }
 }
