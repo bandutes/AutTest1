@@ -26,5 +26,6 @@ public class ButtonsPage {
         return Common.getTextFormatElement(
                 Locators.DemoQa.Buttons.buttonRightClick
         );
+
     }
 }

@@ -4,6 +4,7 @@ import lt.noju.pom.pages.demoqa.ButtonsPage;
 import lt.noju.pom.pages.demoqa.ElementsPage;
 import lt.noju.pom.pages.demoqa.HomePage;
 import lt.noju.pom.tests.BaseTest;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -34,8 +35,10 @@ public class ButtonsTest extends BaseTest {
         ButtonsPage.rightClickOnButton();
         actualResult = ButtonsPage.readMessageOfRightClick();
 
+        Assert.assertEquals(actualResult, expectedResult);
     }
 }
+
 
 
 
